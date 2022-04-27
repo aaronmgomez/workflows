@@ -17,6 +17,10 @@ on:
         required: true
       DOCKER_PASSWORD:
         required: true
+      ARTIFACTORY_USER:
+        required: true
+      ARTIFACTORY_PASS:
+        required: true
 
 jobs:
   build:
