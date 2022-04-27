@@ -9,13 +9,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Bump version and push tag
-        uses: aaronmgomez/github-tag-action@master
+        uses: otrl/github-tag-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.github_token }}
           DEFAULT_BUMP: patch
           VERBOSE: true
       - name: Create release
-        shell: bash
-        run: ./.github/scripts/build.sh
+        uses: otrl/github-release-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.github_token }}
