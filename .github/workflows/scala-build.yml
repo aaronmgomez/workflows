@@ -22,6 +22,10 @@ on:
       ARTIFACTORY_PASS:
         required: true
 
+env:
+  ARTIFACTORY_USER: ${{ secrets.ARTIFACTORY_USER }}
+  ARTIFACTORY_PASS: ${{ secrets.ARTIFACTORY_PASS }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
